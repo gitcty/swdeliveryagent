@@ -1,0 +1,23 @@
+{
+  "id": "TASK-001",
+  "title": "Describe the first deliverable",
+  "status": "intake",
+  "owner": "orchestrator",
+  "iteration": 1,
+  "requirements": {
+    "summary": "",
+    "acceptance_criteria": []
+  },
+  "artifacts": [],
+  "checks": [],
+  "notes": [],
+  "history": [
+    {
+      "at": "2026-01-01T00:00:00Z",
+      "actor": "human",
+      "from": null,
+      "to": "intake",
+      "summary": "Task created."
+    }
+  ]
+}
