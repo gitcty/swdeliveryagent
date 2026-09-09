@@ -23,3 +23,14 @@ jobs:
           shopt -s nullglob
           files=(workflow/task.example.json tasks/*.json)
           python3 scripts/validate_task.py "${files[@]}"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          cache-dependency-path: web/pnpm-lock.yaml
+      - name: Build task builder
+        working-directory: web
+        run: pnpm install --frozen-lockfile && pnpm build
