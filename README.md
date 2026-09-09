@@ -18,6 +18,7 @@ workflow/               State model, schema, and example task
 scripts/validate_task.py Dependency-free task validator
 tests/                  Validator tests
 .github/workflows/      CI gate
+web/                    Browser-based task builder
 AGENTS.md               Default instructions for agent-capable tools
 ```
 
@@ -47,6 +48,18 @@ Any active phase may move to `blocked`; the Orchestrator records the reason and 
 python3 -m unittest discover -s tests
 python3 scripts/validate_task.py workflow/task.example.json
 ```
+
+## Task Builder GUI
+
+The `web/` app provides a guided form, live JSON preview, validation, and a download button. To run it locally:
+
+```bash
+cd web
+pnpm install
+pnpm dev
+```
+
+Open the local address shown in the terminal, complete the form, and download the JSON file into `tasks/`.
 
 ## Working agreement
 
